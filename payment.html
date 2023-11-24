@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/cart.html">Card</a>
+            <a href="/categories.html">categories</a>
+            <a href="payment.html">Payment</a>
+            <div class="search-container">
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
+            </div>
+          </nav>
+    
+    </section>
+
+
+
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    .payment-receipt {
+        background-color: #87CEEB;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .receipt-heading {
+        font-size: 2.5rem;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .book-details {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+
+    .book-details th, .book-details td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .book-details th {
+        background-color: #000000;
+        color: #fff;
+    }
+
+    .total-amount {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #000000;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .return-home {
+        margin-top: 10px;
+        padding: 15px 30px;
+        font-size: 16px;
+        background-color: #005b5b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+    
+    
+    <div class="payment-receipt">
+        <h1 class="receipt-heading">Payment Receipt</h1>
+    
+        <table class="book-details">
+            <div class="total-amount">Total Amount: $44.98</div>
+    
+            <a href="index.html" class="return-home">Return to Home</a>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="bookDetailsBody">
+                <!-- Display book details dynamically here -->
+                <!-- Example: <tr><td>Book Title</td><td>1</td><td>$19.99</td></tr> -->
+            </tbody>
+        </table>
+    
+       
+    </div>
+    
+</div>
+    <!-- JavaScript -->
+    <script src="payment.js"></script>
+</body>
+</html>
